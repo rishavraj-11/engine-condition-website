@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, "Segoe UI", sans-serif;
+    background: #0b1120;
+    color: #e5e7eb;
+}
+
+.container {
+    width: min(920px, 92%);
+    margin: 45px auto;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    color: #60a5fa;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: clamp(30px, 5vw, 46px);
+    margin: 12px 0;
+}
+
+.subtitle {
+    color: #9ca3af;
+}
+
+form, .result {
+    background: #111b2e;
+    border: 1px solid #29374d;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background: #0b1120;
+    border: 1px solid #36465e;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid #60a5fa;
+    border-color: transparent;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 25px;
+    background: #3b82f6;
+    color: white;
+    border: 0;
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.result {
+    margin-top: 22px;
+    border-color: #3b82f6;
+}
+
+#condition {
+    overflow-wrap: anywhere;
+    color: #93c5fd;
+    font-size: 28px;
+}
+
+#probabilities {
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+#message {
+    color: #fca5a5;
+    margin-top: 15px;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #64748b;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        margin: 25px auto;
+    }
+
+    form, .result {
+        padding: 18px;
+    }
+}
